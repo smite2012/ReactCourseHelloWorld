@@ -9,21 +9,32 @@ class Counter extends Component {
   }
 
   increment() {
-    this.setState({
+    /*this.setState({
         count: this.state.count + 1
       },
       () => {
         console.log('Callback value', this.state.count)
       })
     //won`t work because setState is async and executed before console.log()
-    console.log(this.state.count)
+    console.log(this.state.count)*/
+    this.setState((prevState) => ({
+      count: prevState.count + 1
+    }))
+  }
+
+  incrementFive() {
+    this.increment()
+    this.increment()
+    this.increment()
+    this.increment()
+    this.increment()
   }
 
   render() {
     return (
       <div>
         <div>Count - {this.state.count}</div>
-        <button onClick={() => this.increment()}>Increment</button>
+        <button onClick={() => this.incrementFive()}>Increment</button>
       </div>
     );
   }
