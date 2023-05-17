@@ -9,16 +9,14 @@ class UserGreeting extends Component {
   }
 
   render() {
-
     /*Conditional operators*/
-    return(
-      this.state.isLoggedIn ?
-        <div>Welcome UserName!</div> :
-        <div>Welcome Guest!</div>
+    return (
+      this.state.isLoggedIn ? (
+        <div>Welcome UserName!</div>
+      ) : (
+        <div>Welcome Guest!</div>)
     )
-
     /*Element variables*/
-
     /*let message
     if(this.state.isLoggedIn){
       message = <div>Welcome UserName!</div>
@@ -27,14 +25,12 @@ class UserGreeting extends Component {
     }
 
     return <div>{message}</div>*/
-
     /*if/else*/
-
-   /* if (this.state.isLoggedIn) {
-      return <div>Welcome UserName!</div>
-    } else {
-      return <div>Welcome Guest!</div>
-    }*/
+    /* if (this.state.isLoggedIn) {
+       return <div>Welcome UserName!</div>
+     } else {
+       return <div>Welcome Guest!</div>
+     }*/
     /*return (
       <div>
         <div>Welcome UserName!</div>
