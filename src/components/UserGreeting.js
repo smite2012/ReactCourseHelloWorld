@@ -9,11 +9,21 @@ class UserGreeting extends Component {
   }
 
   render() {
-    if (this.state.isLoggedIn) {
+
+    let message
+    if(this.state.isLoggedIn){
+      message = <div>Welcome UserName!</div>
+    }else{
+      message = <div>Welcome Guest!</div>
+    }
+
+    return <div>{message}</div>
+
+   /* if (this.state.isLoggedIn) {
       return <div>Welcome UserName!</div>
     } else {
       return <div>Welcome Guest!</div>
-    }
+    }*/
     /*return (
       <div>
         <div>Welcome UserName!</div>
