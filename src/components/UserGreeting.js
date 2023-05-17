@@ -10,14 +10,25 @@ class UserGreeting extends Component {
 
   render() {
 
-    let message
+    /*Conditional operators*/
+    return(
+      this.state.isLoggedIn ?
+        <div>Welcome UserName!</div> :
+        <div>Welcome Guest!</div>
+    )
+
+    /*Element variables*/
+
+    /*let message
     if(this.state.isLoggedIn){
       message = <div>Welcome UserName!</div>
     }else{
       message = <div>Welcome Guest!</div>
     }
 
-    return <div>{message}</div>
+    return <div>{message}</div>*/
+
+    /*if/else*/
 
    /* if (this.state.isLoggedIn) {
       return <div>Welcome UserName!</div>
